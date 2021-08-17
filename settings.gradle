@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        gradlePluginPortal()
+    }
+}
+
+include 'mods:celib-mod'
+include 'mods:refabslab-mod'
+
+include 'tools:celib-processor'

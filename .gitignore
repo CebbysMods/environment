@@ -1,0 +1,26 @@
+# Folders
+.gradle
+.idea
+build
+logs
+src
+run
+out
+
+# Mod folders
+mods/**
+tools/**
+
+# Minecraft client folder
+minecraft/client/.mixin.out
+minecraft/client/crash-reports
+minecraft/client/logs
+minecraft/client/mods
+minecraft/client/saves
+minecraft/client/options.txt
+minecraft/client/usercache.json
+
+# Minecraft server folder
+minecraft/server
+
+
