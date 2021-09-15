@@ -8,8 +8,8 @@ run
 out
 
 # Mod folders
-mods/**
-tools/**
+mods
+tools
 
 # Minecraft client folder
 minecraft/client/.mixin.out
