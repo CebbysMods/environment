@@ -1,10 +1,10 @@
 plugins {
     id 'java'
-    id 'fabric-loom' version '0.9-SNAPSHOT'
+    id 'fabric-loom' version '0.10-SNAPSHOT'
 }
 
-sourceCompatibility = JavaVersion.VERSION_16
-targetCompatibility = JavaVersion.VERSION_16
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 group = project.project_group
 version = project.project_version
@@ -13,6 +13,9 @@ archivesBaseName = project.project_name
 
 repositories {
     mavenCentral()
+    flatDir {
+        dirs 'C:/git/java/environment/mods/ad-astra-mod/lib'
+    }
 }
 
 dependencies {
@@ -20,10 +23,10 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    implementation project(":mods:ad-astra-mod")
 
-    implementation project(":mods:celib:lib-mod")
-    implementation project(":mods:celib:respro-mod")
-    implementation project(":mods:refabslab-mod")
+//    implementation project(":mods:celib:respro-mod")
+//    implementation project(":mods:refabslab-mod")
 }
 
 subprojects {
@@ -35,7 +38,7 @@ subprojects {
 
     tasks.withType(JavaCompile).configureEach {
         it.options.encoding = "UTF-8"
-        it.options.release = 16
+        it.options.release = 17
     }
 }
 
